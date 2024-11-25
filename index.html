@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon-Clicker [Z]</title>
+</head>
+<body>
+    <h1>Lemon Clicker</h1>
+    <p>Тапай по лимону!</p>
+    <img src="lemon.png" alt="" srcset="" width="300px">
+   
+
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        
+    </head>
+    <body>
+    
+        <h1 id="counter">0</h1>
+        <button id="incrementButton">Tap</button>
+    
+        <script>
+
+            const counterDisplay = document.getElementById('counter');
+            const incrementButton = document.getElementById('incrementButton');
+    
+
+            let count = localStorage.getItem('count') ? parseInt(localStorage.getItem('count')) : 0;
+    
+
+            counterDisplay.textContent = count;
+    
+
+            incrementButton.addEventListener('click', () => {
+                count++; 
+                counterDisplay.textContent = count; 
+                localStorage.setItem('count', count); 
+            });
+        </script>
+</body>
+</html>
